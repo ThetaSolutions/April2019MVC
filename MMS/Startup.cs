@@ -82,6 +82,7 @@ namespace MMS
                     name: "default",
                     template: "{controller=Main}/{action=AddNewMovie}/{id?}");
             });
+
         }
     }
 }

@@ -42,6 +42,7 @@ namespace MMS.Controllers
             {
                 ViewBag.Message = "An error occured, please try again";
             }
+
             return View();
         }
 
