@@ -12,6 +12,7 @@ namespace MMS.Controllers
         private april2019dbContext ORM = null;
         public MainController(april2019dbContext _ORM)
         {
+            int a = 10;
             ORM = _ORM;
         }
 
