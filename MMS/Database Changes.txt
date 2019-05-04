@@ -1,0 +1,4 @@
+﻿04May2019
+ALTER TABLE dbo.movie ADD
+	created_by nvarchar(50) NULL
+-------------

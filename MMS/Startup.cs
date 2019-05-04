@@ -13,6 +13,7 @@ using Microsoft.EntityFrameworkCore;
 using MMS.Data;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using MMS.Models;
 
 namespace MMS
 {
@@ -38,6 +39,15 @@ namespace MMS
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(
                     Configuration.GetConnectionString("DefaultConnection")));
+
+
+            services.AddDbContext<april2019dbContext>(options =>
+                options.UseSqlServer(
+                    Configuration.GetConnectionString("MyCS")));
+
+
+
+
             services.AddDefaultIdentity<IdentityUser>()
                 .AddDefaultUI(UIFramework.Bootstrap4)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
@@ -70,7 +80,7 @@ namespace MMS
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Home}/{action=Index}/{id?}");
+                    template: "{controller=Main}/{action=AddNewMovie}/{id?}");
             });
         }
     }
