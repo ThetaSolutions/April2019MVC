@@ -12,6 +12,7 @@ namespace MMS.Controllers
     {
         public IActionResult Index()
         {
+        int a = 10;
             return View();
         }
 
